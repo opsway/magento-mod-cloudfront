@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>sss
+    <modules>
+        <OpsWay_Cloudfront>
+            <version>0.1.0</version>
+        </OpsWay_Cloudfront>
+    </modules>
+    <global>
+        <models>
+            <opsway_cloudfront>
+                <class>OpsWay_Cloudfront_Model</class>
+            </opsway_cloudfront>
+            <core>
+				<rewrite>
+					<design_package>OpsWay_Cloudfront_Model_Design_Package</design_package>
+				</rewrite>
+			</core>
+        </models>
+    </global>
+</config>
