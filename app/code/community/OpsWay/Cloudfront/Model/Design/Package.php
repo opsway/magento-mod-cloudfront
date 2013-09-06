@@ -76,4 +76,16 @@ class OpsWay_Cloudfront_Model_Design_Package extends Mage_Core_Model_Design_Pack
         }
         return '';
     }
+
+    // Not processing urls with data:image used
+    protected function _cssMergerUrlCallback($match)
+    {
+        $quote = ($match[1][0] == "'" || $match[1][0] == '"') ? $match[1][0] : '';
+        $uri = ($quote == '') ? $match[1] : substr($match[1], 1, strlen($match[1]) - 2);
+        if (strpos($uri,'data:image') === false) {
+           $uri = $this->_prepareUrl($uri);
+        }
+
+        return "url({$quote}{$uri}{$quote})";
+    }
 }
