@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<config>sss
+<config>
     <modules>
-        <opsway_cloudfront>
-            <version>0.1.0</version>
-        </opsway_cloudfront>
+        <OpsWay_Cloudfront>
+            <version>0.1.1</version>
+        </OpsWay_Cloudfront>
     </modules>
     <global>
         <models>
